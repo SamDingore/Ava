@@ -31,7 +31,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
 
   // Get the uploaded file details
   const file = req.file;
-  console.log(req.file);
+  console.log(req.file.filename);
 
   res.send(`${file.filename}`);
 });
